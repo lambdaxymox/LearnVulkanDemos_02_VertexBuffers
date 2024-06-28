@@ -66,7 +66,7 @@ endfunction()
 
 cmake_minimum_required(VERSION 3.28)
 
-project("LearnVulkanDemos_01_HelloTriangle" VERSION 1.0.0 LANGUAGES CXX)
+project("LearnVulkanDemos_02_VertexBuffers" VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
@@ -84,17 +84,17 @@ add_subdirectory(internal/vulkan_engine)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
-add_executable(LearnVulkanDemos_01_HelloTriangle)
-target_sources(LearnVulkanDemos_01_HelloTriangle PRIVATE
+add_executable(LearnVulkanDemos_02_VertexBuffers)
+target_sources(LearnVulkanDemos_02_VertexBuffers PRIVATE
     src/main.cpp
 )
-target_link_libraries(LearnVulkanDemos_01_HelloTriangle PRIVATE Vulkan::Vulkan)
-target_link_libraries(LearnVulkanDemos_01_HelloTriangle PRIVATE vulkan_engine)
-target_link_libraries(LearnVulkanDemos_01_HelloTriangle PRIVATE glfw)
-target_link_libraries(LearnVulkanDemos_01_HelloTriangle PRIVATE glm)
-target_link_libraries(LearnVulkanDemos_01_HelloTriangle PRIVATE fmt)
-add_dependencies(LearnVulkanDemos_01_HelloTriangle GLSL_Shaders)
-add_dependencies(LearnVulkanDemos_01_HelloTriangle HLSL_Shaders)
+target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE Vulkan::Vulkan)
+target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE vulkan_engine)
+target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE glfw)
+target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE glm)
+target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE fmt)
+add_dependencies(LearnVulkanDemos_02_VertexBuffers GLSL_Shaders)
+add_dependencies(LearnVulkanDemos_02_VertexBuffers HLSL_Shaders)
 
 find_program(GLSL_VALIDATOR glslangValidator HINTS /usr/bin /usr/local/bin $ENV{VULKAN_SDK}/Bin/ $ENV{VULKAN_SDK}/Bin32/)
 find_program(DX_SHADER_COMPILER dxc HINTS /usr/bin /usr/local/bin $ENV{VULKAN_SDK}/Bin/ $ENV{VULKAN_SDK}/Bin32/)
