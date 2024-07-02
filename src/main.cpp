@@ -1584,7 +1584,7 @@ private:
 
     void createEngine() {
         auto engine = Engine::createDebugMode();
-        engine->createWindow(WIDTH, HEIGHT, "Hello, Triangle!");
+        engine->createWindow(WIDTH, HEIGHT, "Vertex Buffers");
 
         m_engine = engine;
     }
