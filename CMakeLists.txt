@@ -79,8 +79,6 @@ find_package(Vulkan REQUIRED)
 add_subdirectory(external/glfw-3.4)
 add_subdirectory(external/glm-1.0.1)
 add_subdirectory(external/fmt-10.2.0)
-add_subdirectory(external/stb)
-add_subdirectory(external/tiny_obj_loader)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
@@ -93,8 +91,6 @@ target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE Vulkan::Vulkan)
 target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE glfw)
 target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE glm)
 target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE fmt)
-target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE stb)
-target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE tiny_obj_loader)
 add_dependencies(LearnVulkanDemos_02_VertexBuffers GLSL_Shaders)
 add_dependencies(LearnVulkanDemos_02_VertexBuffers HLSL_Shaders)
 
