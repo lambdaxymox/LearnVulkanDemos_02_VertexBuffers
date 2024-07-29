@@ -86,6 +86,7 @@ add_executable(LearnVulkanDemos_02_VertexBuffers)
 target_sources(LearnVulkanDemos_02_VertexBuffers PRIVATE
     src/main.cpp
     src/engine.cpp
+    src/engine_impl_fmt.cpp
 )
 target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE Vulkan::Vulkan)
 target_link_libraries(LearnVulkanDemos_02_VertexBuffers PRIVATE glfw)
